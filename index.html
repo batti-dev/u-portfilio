@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talha — Creative Developer Portfolio</title>
+  <meta name="description" content="A narrative-driven portfolio by Talha. Creative developer, storyteller, and builder of immersive web experiences." />
+  <meta name="theme-color" content="#7C5CFC" />
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="Talha — Creative Developer Portfolio" />
+  <meta property="og:description" content="Explore Talha's portfolio through a cinematic scroll experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://talha.dev" />
+  <meta property="og:image" content="./images/og-image.jpg" />
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Talha — Creative Developer Portfolio" />
+  <meta name="twitter:description" content="Explore Talha's portfolio through a cinematic scroll experience." />
+  <meta name="twitter:image" content="./images/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/logo.png" />
+  <link rel="apple-touch-icon" href="./images/logo.png" />
+
+
+  <!-- Font Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+
+  <!-- Styles -->
+  <script type="module" crossorigin src="./assets/index-C7pi5E3o.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C8uMCbM-.css">
+</head>
+<body>
+
+  <!-- ============================
+       LOADER
+       ============================ -->
+  <div class="loader" id="loader">
+    <div class="loader__inner">
+      <img src="./images/logo.png" alt="Talha Logo" class="loader__logo" />
+      <div class="loader__progress">
+        <div class="loader__bar-track">
+          <div class="loader__bar-fill" id="loader-bar"></div>
+        </div>
+        <span class="loader__percentage" id="loader-perc">0%</span>
+      </div>
+      <p class="loader__text">Loading Experience</p>
+    </div>
+  </div>
+
+  <!-- ============================
+       NAVBAR
+       ============================ -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      <img src="./images/logo.png" alt="Talha" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="nav-socials">
+        <a href="https://linkedin.com/in/batti-pop-8321b53b7" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+        <a href="https://github.com/batti-dev" target="_blank" rel="noopener" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+        <a href="https://x.com/BattiP88236" target="_blank" rel="noopener" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+        <div class="nav-socials-divider"></div>
+      </div>
+
+      <button class="nav-burger" id="nav-burger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-mobile" id="nav-mobile">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <div class="nav-mobile-socials">
+      <a href="https://linkedin.com/in/batti-pop-8321b53b7" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+      <a href="https://github.com/batti-dev" target="_blank" rel="noopener" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+      <a href="https://x.com/BattiP88236" target="_blank" rel="noopener" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+    </div>
+  </div>
+
+  <!-- ============================
+       CHARACTER (fixed, floats through page)
+       ============================ -->
+  <div class="character-ghost-container" id="character-ghost">
+    <!-- SVG Trail: the glowing path the character follows -->
+    <svg class="pencil-trail-svg" id="pencil-trail-svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="trail-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="var(--accent, #7C5CFC)" stop-opacity="0.3" />
+          <stop offset="50%" stop-color="var(--accent-glow, #a78bfa)" stop-opacity="0.2" />
+          <stop offset="100%" stop-color="var(--accent, #7C5CFC)" stop-opacity="0.1" />
+        </linearGradient>
+      </defs>
+      <path id="pencil-trail" fill="none" stroke="url(#trail-gradient)" stroke-width="2" stroke-linecap="round" />
+    </svg>
+    <div class="character" id="character">
+      <img src="./images/boy-floating.png" alt="Floating boy with umbrella" id="char-floating" class="boy-floating" />
+      <img src="./images/boy-landed.png" alt="Boy landed" id="char-landed" class="boy-landed" />
+    </div>
+  </div>
+
+  <!-- ============================
+       MAIN CONTENT
+       ============================ -->
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <video
+        id="hero-video"
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="./images/hero-poster.jpg"
+      >
+        <source src="./video/hero.webm" type="video/webm" />
+        <source src="./video/hero.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content section-content">
+        <p class="section-label">Welcome to my world</p>
+        <h1>Hi, I'm <span class="accent" id="hero-morph">Talha</span></h1>
+        <p class="hero-subtitle">Creative Developer · Storyteller</p>
+        <a href="#about" class="cta-btn" id="cta-explore">
+          Explore My Work
+          <i class="ph ph-arrow-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <canvas id="about-shader" class="about-shader"></canvas>
+      <div class="about-overlay"></div>
+      <div class="about-content section-content">
+        <div class="about-text">
+          <p class="section-label">About Me</p>
+          <h2 class="section-heading">Crafting Digital <span class="accent">Experiences</span></h2>
+          <p>I'm a passionate developer who believes in the power of storytelling through code. Every project I build is a narrative — a journey from problem to solution, wrapped in beautiful, interactive design.</p>
+          <p>With a keen eye for detail and a love for smooth animations, I create web experiences that feel alive. From cinematic scroll experiences to micro-interactions that delight, I bring ideas to life pixel by pixel.</p>
+          <div class="about-divider"></div>
+        </div>
+        <div class="about-character">
+          <div class="about-character-box">
+            <img src="./images/boy-greeting.png" alt="Greeting character" id="greet-char" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <canvas class="rain-canvas" id="rain-canvas-projects"></canvas>
+      <div class="projects-content section-content">
+        <p class="section-label">Portfolio</p>
+        <h2 class="section-heading">Projects I've Brought to <span class="accent">Life</span></h2>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Cards injected by projects.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <canvas class="rain-canvas" id="rain-canvas-skills"></canvas>
+      <div class="skills-content section-content">
+        <p class="section-label">Tech Stack</p>
+        <h2 class="section-heading">Skills & <span class="accent">Tools</span></h2>
+        <div class="skills-grid" id="skills-grid">
+          <!-- Pills injected by skills.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <canvas class="stars-canvas" id="stars-canvas"></canvas>
+      <div class="contact-content section-content">
+        <div>
+          <p class="section-label">Get In Touch</p>
+          <h2 class="section-heading contact-info__heading">Let's <span class="accent">Connect</span></h2>
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <label for="user-name">Name</label>
+              <input type="text" id="user-name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="user-email">Email</label>
+              <input type="email" id="user-email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="user-message">Message</label>
+              <textarea id="user-message" name="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit" id="form-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="spinner"></span>
+            </button>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <a href="mailto:battipop85@gmail.com" class="contact-info__item">
+            <div class="contact-info__icon"><i class="ph ph-envelope-simple"></i></div>
+            <div class="contact-info__text">
+              <span class="contact-info__label">Email</span>
+              <span class="contact-info__value">battipop85@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://wa.me/9203441636700" target="_blank" rel="noopener" class="contact-info__item">
+            <div class="contact-info__icon"><i class="ph ph-whatsapp-logo"></i></div>
+            <div class="contact-info__text">
+              <span class="contact-info__label">WhatsApp</span>
+              <span class="contact-info__value">03441636700</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">© 2026 Talha</p>
+      <p class="footer__built">Built with GSAP & Lenis</p>
+      <div class="footer__socials">
+        <a href="mailto:battipop85@gmail.com" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+        <a href="https://wa.me/9203441636700" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ph ph-whatsapp-logo"></i></a>
+        <a href="https://github.com/batti-dev" target="_blank" rel="noopener" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+        <a href="https://x.com/BattiP88236" target="_blank" rel="noopener" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast container -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts -->
+</body>
+</html>
